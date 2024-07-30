@@ -12,16 +12,32 @@ enum Menu { MAIN_MENU, SETTINGS_MENU }
 var current_menu : Menu = Menu.MAIN_MENU
 
 func _enter_tree():
-	start_button.pressed.connect(_on_start_button_pressed)
-	settings_button.pressed.connect(_on_settings_pressed)
-	exit_button.pressed.connect(_on_exit_pressed)
+	#start_button.pressed.connect(_on_start_button_pressed)
+	#settings_button.pressed.connect(_on_settings_pressed)
+	#exit_button.pressed.connect(_on_exit_pressed)
+	pass
 	
 func _exit_tree():
-	start_button.pressed.disconnect(_on_start_button_pressed)
-	settings_button.pressed.disconnect(_on_settings_pressed)
-	exit_button.pressed.disconnect(_on_exit_pressed)
+	#start_button.pressed.disconnect(_on_start_button_pressed)
+	#settings_button.pressed.disconnect(_on_settings_pressed)
+	#exit_button.pressed.disconnect(_on_exit_pressed)
+	print('a')
+
 
 func _on_start_button_pressed():
+	var teste = [1,2,3,4,5,6,7,8,9]
+	seed(hash('ABCDEF'))
+	teste.shuffle()
+	print(teste)
+	
+	seed(hash('ABCDEFG'))
+	teste.shuffle()
+	print(teste)
+	
+	seed(hash('ABCDE'))
+	teste.shuffle()
+	print(teste)
+	
 	SceneTransitionManager.change_scene_with_transition(
 		start_scene_path,
 		transition_path

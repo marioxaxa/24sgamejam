@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://0mmp1xuggwav"]
+
+[ext_resource type="Texture2D" uid="uid://dj1u3c5hb7mno" path="res://sprites/elevator/resized_image_540x810.png" id="1_4umdr"]
+
+[node name="Elevator" type="Node2D"]
+position = Vector2(270, 405)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_4umdr")

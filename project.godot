@@ -29,6 +29,8 @@ CameraShakeManager="*res://scenes/preloads/camera_shake_manager.tscn"
 
 [display]
 
+window/size/viewport_width=540
+window/size/viewport_height=810
 window/size/resizable=false
 window/stretch/mode="canvas_items"
 
