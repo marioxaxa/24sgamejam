@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://6gvx2i1egsco"]
+
+[ext_resource type="Script" path="res://Square2.gd" id="1_lq7ke"]
+[ext_resource type="Texture2D" uid="uid://dapyoxafh46n7" path="res://assets/png-transparent-symbol-global-media-publishing-ltd-square-inc-square-root-emoticon-square-miscellaneous-angle-text-thumbnail.png" id="2_xr3lt"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Square2" type="Node2D" parent="."]
+position = Vector2(237, 56)
+script = ExtResource("1_lq7ke")
+
+[node name="Sprite2" type="Sprite2D" parent="Square2"]
+modulate = Color(0, 0, 0, 1)
+texture_filter = 1
+scale = Vector2(0.273611, 0.259722)
+texture = ExtResource("2_xr3lt")
