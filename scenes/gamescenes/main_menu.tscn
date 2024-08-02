@@ -1,26 +1,21 @@
-[gd_scene load_steps=33 format=3 uid="uid://7awyq0ct2tbc"]
+[gd_scene load_steps=26 format=3 uid="uid://chee17ae0u5op"]
 
-[ext_resource type="FontFile" uid="uid://07yvi11ui7vg" path="res://fonts/Peaberry/PeaberryMono.ttf" id="1_vkwgl"]
-[ext_resource type="StyleBox" uid="uid://b6h4sqok6xlxy" path="res://themes/pixelart/button_normal_style.tres" id="2_ncvxf"]
-[ext_resource type="StyleBox" uid="uid://dj0ib6qvmygdj" path="res://themes/pixelart/button_pressed_style.tres" id="3_lpqhw"]
-[ext_resource type="Texture2D" uid="uid://c8yfrjpm5qqjt" path="res://sprites/ui/ui-tileset.png" id="4_8phxg"]
-[ext_resource type="Theme" uid="uid://byds11vsd6ber" path="res://themes/pixelart/pixelart.tres" id="5_w71ef"]
-[ext_resource type="Script" path="res://scripts/ui/viewport_container.gd" id="6_vh7vw"]
-[ext_resource type="Script" path="res://scripts/elevator/select_menu.gd" id="7_vbune"]
-[ext_resource type="PackedScene" uid="uid://chee17ae0u5op" path="res://scenes/gamescenes/main_menu.tscn" id="8_32i10"]
-[ext_resource type="PackedScene" path="res://scenes/scene_transitions/fade_transition.tscn" id="9_5omk6"]
-[ext_resource type="Script" path="res://scripts/ui/audio_menu.gd" id="10_se1tq"]
-[ext_resource type="PackedScene" uid="uid://0mmp1xuggwav" path="res://scenes/gamescenes/elevator.tscn" id="11_kxwj0"]
-[ext_resource type="FontFile" uid="uid://bfg01sny5tdtq" path="res://fonts/Peaberry/PeaberryDoublespace.ttf" id="11_xtqxw"]
-[ext_resource type="PackedScene" path="res://scenes/scene_transitions/circle_transition.tscn" id="12_8jgss"]
-[ext_resource type="Script" path="res://scripts/elevator/to_upper_case.gd" id="12_lks53"]
+[ext_resource type="FontFile" uid="uid://07yvi11ui7vg" path="res://fonts/Peaberry/PeaberryMono.ttf" id="1_hd4ol"]
+[ext_resource type="StyleBox" uid="uid://b6h4sqok6xlxy" path="res://themes/pixelart/button_normal_style.tres" id="2_8ch4x"]
+[ext_resource type="StyleBox" uid="uid://dj0ib6qvmygdj" path="res://themes/pixelart/button_pressed_style.tres" id="3_s2jdm"]
+[ext_resource type="Texture2D" uid="uid://c8yfrjpm5qqjt" path="res://sprites/ui/ui-tileset.png" id="4_i4tp6"]
+[ext_resource type="Theme" uid="uid://byds11vsd6ber" path="res://themes/pixelart/pixelart.tres" id="5_hqpdx"]
+[ext_resource type="Script" path="res://scripts/ui/viewport_container.gd" id="6_hjodd"]
+[ext_resource type="Script" path="res://scripts/ui/main_menu.gd" id="7_rompg"]
+[ext_resource type="PackedScene" uid="uid://7awyq0ct2tbc" path="res://scenes/gamescenes/select_mode.tscn" id="8_o4owu"]
+[ext_resource type="PackedScene" path="res://scenes/scene_transitions/circle_transition.tscn" id="9_c3n2y"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ve7hb"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n3wa8"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rbmb2"]
-texture = ExtResource("4_8phxg")
+texture = ExtResource("4_i4tp6")
 texture_margin_left = 7.0
 texture_margin_top = 7.0
 texture_margin_right = 7.0
@@ -30,17 +25,17 @@ axis_stretch_vertical = 1
 region_rect = Rect2(0, 0, 48, 48)
 
 [sub_resource type="Theme" id="Theme_un6xn"]
-default_font = ExtResource("1_vkwgl")
+default_font = ExtResource("1_hd4ol")
 Button/constants/h_separation = 0
 Button/constants/icon_max_width = 0
 Button/constants/outline_size = 0
 Button/font_sizes/font_size = 30
-Button/fonts/font = ExtResource("1_vkwgl")
+Button/fonts/font = ExtResource("1_hd4ol")
 Button/styles/disabled = null
 Button/styles/focus = SubResource("StyleBoxEmpty_ve7hb")
-Button/styles/hover = ExtResource("2_ncvxf")
-Button/styles/normal = ExtResource("2_ncvxf")
-Button/styles/pressed = ExtResource("3_lpqhw")
+Button/styles/hover = ExtResource("2_8ch4x")
+Button/styles/normal = ExtResource("2_8ch4x")
+Button/styles/pressed = ExtResource("3_s2jdm")
 Label/colors/font_color = Color(0.317647, 0.321569, 0.384314, 1)
 Label/constants/line_spacing = 3
 Label/constants/outline_size = 0
@@ -48,22 +43,15 @@ Label/constants/shadow_offset_x = 1
 Label/constants/shadow_offset_y = 1
 Label/constants/shadow_outline_size = 1
 Label/font_sizes/font_size = 16
-Label/fonts/font = ExtResource("1_vkwgl")
+Label/fonts/font = ExtResource("1_hd4ol")
 Label/styles/normal = SubResource("StyleBoxEmpty_n3wa8")
 Panel/styles/panel = SubResource("StyleBoxTexture_rbmb2")
 
-[sub_resource type="LabelSettings" id="LabelSettings_yyvvm"]
-font = ExtResource("1_vkwgl")
-font_size = 50
-
 [sub_resource type="LabelSettings" id="LabelSettings_utnyj"]
-font_size = 50
-
-[sub_resource type="LabelSettings" id="LabelSettings_pvpka"]
-font_size = 72
+font_size = 100
 
 [sub_resource type="LabelSettings" id="LabelSettings_0qyyl"]
-font_size = 36
+font_size = 100
 
 [sub_resource type="Animation" id="Animation_ro8gj"]
 length = 0.001
@@ -182,7 +170,7 @@ states/settings_menu/position = Vector2(685, 179)
 transitions = ["Start", "main_menu", SubResource("AnimationNodeStateMachineTransition_ckc0g"), "main_menu", "settings_menu", SubResource("AnimationNodeStateMachineTransition_huiay"), "settings_menu", "main_menu", SubResource("AnimationNodeStateMachineTransition_b8jnv")]
 graph_offset = Vector2(-12, 98)
 
-[node name="select_mode" type="Control"]
+[node name="menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -200,28 +188,27 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("5_w71ef")
+theme = ExtResource("5_hqpdx")
 
 [node name="Main Menu" type="AspectRatioContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 540.0
-offset_bottom = 810.0
+offset_right = 4860.0
+offset_bottom = 7290.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("6_vh7vw")
+script = ExtResource("6_hjodd")
 
-[node name="Menu Control" type="Control" parent="Main Menu" node_paths=PackedStringArray("mode_elevator_button", "mode_reader_button", "exit_button", "tittle")]
+[node name="Menu Control" type="Control" parent="Main Menu" node_paths=PackedStringArray("start_button", "settings_button", "exit_button")]
 layout_mode = 2
-script = ExtResource("7_vbune")
-mode_elevator_button = NodePath("../MarginContainer/VBoxContainer/VBoxContainer/start_button")
-mode_reader_button = NodePath("../MarginContainer/VBoxContainer/VBoxContainer2/start_button")
-exit_button = NodePath("../MarginContainer/VBoxContainer/MarginContainer/exit_button")
-tittle = NodePath("../../Settings Menu/MarginContainer/VBoxContainer/ModoSelecionado")
-start_scene_path = ExtResource("8_32i10")
-transition_path = ExtResource("9_5omk6")
+script = ExtResource("7_rompg")
+start_button = NodePath("../MarginContainer/VBoxContainer/start_button")
+settings_button = NodePath("../MarginContainer/VBoxContainer/settings_button")
+exit_button = NodePath("../MarginContainer/VBoxContainer/exit_button")
+start_scene_path = ExtResource("8_o4owu")
+transition_path = ExtResource("9_c3n2y")
 
 [node name="MarginContainer" type="MarginContainer" parent="Main Menu"]
 layout_mode = 2
@@ -230,114 +217,53 @@ size_flags_vertical = 4
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Main Menu/MarginContainer"]
 layout_mode = 2
-size_flags_horizontal = 4
 alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Main Menu/MarginContainer/VBoxContainer"]
-layout_mode = 2
-alignment = 1
-
-[node name="title" type="Label" parent="Main Menu/MarginContainer/VBoxContainer/VBoxContainer"]
+[node name="title" type="Label" parent="Main Menu/MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Elevador"
-label_settings = SubResource("LabelSettings_yyvvm")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="start_button" type="Button" parent="Main Menu/MarginContainer/VBoxContainer/VBoxContainer"]
-layout_mode = 2
-text = "Começar"
-
-[node name="VBoxContainer2" type="VBoxContainer" parent="Main Menu/MarginContainer/VBoxContainer"]
-layout_mode = 2
-alignment = 1
-
-[node name="title" type="Label" parent="Main Menu/MarginContainer/VBoxContainer/VBoxContainer2"]
-layout_mode = 2
-text = "Leitor"
 label_settings = SubResource("LabelSettings_utnyj")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="start_button" type="Button" parent="Main Menu/MarginContainer/VBoxContainer/VBoxContainer2"]
+[node name="start_button" type="Button" parent="Main Menu/MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Começar"
 
-[node name="MarginContainer" type="MarginContainer" parent="Main Menu/MarginContainer/VBoxContainer"]
+[node name="settings_button" type="Button" parent="Main Menu/MarginContainer/VBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
+text = "Como jogar"
 
-[node name="exit_button" type="Button" parent="Main Menu/MarginContainer/VBoxContainer/MarginContainer"]
+[node name="exit_button" type="Button" parent="Main Menu/MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = " Sair "
+text = "Sair"
 
 [node name="Settings Menu" type="AspectRatioContainer" parent="."]
 layout_mode = 0
 offset_left = 1152.0
 offset_right = 1692.0
 offset_bottom = 810.0
-script = ExtResource("6_vh7vw")
-
-[node name="Audio Control" type="Control" parent="Settings Menu" node_paths=PackedStringArray("title", "my_code_line", "friend_code_line", "continue_button", "exit_button")]
-layout_mode = 2
-script = ExtResource("10_se1tq")
-title = NodePath("../MarginContainer/VBoxContainer/ModoSelecionado")
-my_code_line = NodePath("../MarginContainer/VBoxContainer/LineEdit")
-friend_code_line = NodePath("../MarginContainer/VBoxContainer/FriendCode")
-continue_button = NodePath("../MarginContainer/VBoxContainer/Button2")
-exit_button = NodePath("../MarginContainer/VBoxContainer/Button")
-next_scene_path = ExtResource("11_kxwj0")
-transition_path = ExtResource("12_8jgss")
+script = ExtResource("6_hjodd")
 
 [node name="MarginContainer" type="MarginContainer" parent="Settings Menu"]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Settings Menu/MarginContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 alignment = 1
-
-[node name="ModoSelecionado" type="Label" parent="Settings Menu/MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "Elevador"
-label_settings = SubResource("LabelSettings_pvpka")
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="Label" type="Label" parent="Settings Menu/MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "Seu codigo Secreto"
+text = "Tutorial"
 label_settings = SubResource("LabelSettings_0qyyl")
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="LineEdit" type="LineEdit" parent="Settings Menu/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("11_xtqxw")
-theme_override_font_sizes/font_size = 61
-alignment = 1
-editable = false
 
 [node name="Label2" type="Label" parent="Settings Menu/MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "Codigo do parceiro"
-label_settings = SubResource("LabelSettings_0qyyl")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="FriendCode" type="LineEdit" parent="Settings Menu/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("11_xtqxw")
-theme_override_font_sizes/font_size = 61
-placeholder_text = "Digite..."
-alignment = 1
-script = ExtResource("12_lks53")
-
-[node name="Button2" type="Button" parent="Settings Menu/MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "Continuar"
+text = "Explicar como jogar o jogo"
 
 [node name="Button" type="Button" parent="Settings Menu/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -353,5 +279,4 @@ tree_root = SubResource("AnimationNodeStateMachine_6w8s2")
 advance_expression_base_node = NodePath("../Main Menu/Menu Control")
 anim_player = NodePath("../AnimationPlayer")
 
-[connection signal="pressed" from="Settings Menu/MarginContainer/VBoxContainer/Button2" to="Main Menu/Menu Control" method="_on_return_main_menu_button_pressed"]
 [connection signal="pressed" from="Settings Menu/MarginContainer/VBoxContainer/Button" to="Main Menu/Menu Control" method="_on_return_main_menu_button_pressed"]

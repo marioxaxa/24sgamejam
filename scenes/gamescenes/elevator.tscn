@@ -1,9 +1,34 @@
-[gd_scene load_steps=2 format=3 uid="uid://0mmp1xuggwav"]
+[gd_scene load_steps=5 format=3 uid="uid://0mmp1xuggwav"]
 
-[ext_resource type="Texture2D" uid="uid://dj1u3c5hb7mno" path="res://sprites/elevator/resized_image_540x810.png" id="1_4umdr"]
+[ext_resource type="Script" path="res://scripts/elevator/control_elevator.gd" id="1_cshad"]
+[ext_resource type="PackedScene" path="res://scenes/scene_transitions/fade_transition.tscn" id="2_du03v"]
+[ext_resource type="Texture2D" uid="uid://c8nc0jp0hiy0m" path="res://sprites/elevator/Elevador_0.6.png" id="2_es3o2"]
+[ext_resource type="PackedScene" uid="uid://6dxlvewjjcgh" path="res://scenes/gamescenes/colors_puzzle.tscn" id="3_vw0fs"]
 
 [node name="Elevator" type="Node2D"]
 position = Vector2(270, 405)
+script = ExtResource("1_cshad")
+transition_path = ExtResource("2_du03v")
+colors_puzzle_scene = ExtResource("3_vw0fs")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_4umdr")
+texture = ExtResource("2_es3o2")
+
+[node name="colors_button" type="Button" parent="."]
+offset_left = 129.0
+offset_top = 132.0
+offset_right = 190.0
+offset_bottom = 185.0
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="numbers_button" type="Button" parent="."]
+offset_left = 124.0
+offset_top = -138.0
+offset_right = 196.0
+offset_bottom = 43.0
+flat = true
+
+[connection signal="pressed" from="colors_button" to="." method="_on_colors_button_pressed"]
+[connection signal="pressed" from="numbers_button" to="." method="_on_numbers_button_pressed"]

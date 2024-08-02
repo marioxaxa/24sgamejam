@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Game Base 2D"
-run/main_scene="res://scenes/samples/main_menu.tscn"
+run/main_scene="res://scenes/gamescenes/main_menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 boot_splash/use_filter=false
 config/icon="res://icon.svg"
@@ -26,6 +26,7 @@ AudioManager="*res://scenes/preloads/audio_manager.tscn"
 SceneTransitionManager="*res://scenes/preloads/scene_transition_manager.tscn"
 SaveManager="*res://scenes/preloads/save_manager.tscn"
 CameraShakeManager="*res://scenes/preloads/camera_shake_manager.tscn"
+PuzzlesCodes="*res://scripts/elevator/puzzles_codes.gd"
 
 [display]
 
@@ -100,5 +101,7 @@ shoot={
 
 [rendering]
 
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
 environment/volumetric_fog/use_filter=0
 environment/defaults/default_clear_color=Color(0.788235, 0.8, 0.631373, 1)

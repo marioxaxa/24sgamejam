@@ -2,26 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dgegjxjeys5gt"
-path="res://.godot/imported/ui-grabber.png-dd90f760ed7ccdf47428527b31e5c0e4.ctex"
+uid="uid://cowo5cfubpid3"
+path="res://.godot/imported/8_Ligado_.png-2beef0c4f495ebcb5b083733cf6b1cc4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/ui/ui-grabber.png"
-dest_files=["res://.godot/imported/ui-grabber.png-dd90f760ed7ccdf47428527b31e5c0e4.ctex"]
+source_file="res://sprites/elevator/Números elevador/Números Ligados/8_Ligado_.png"
+dest_files=["res://.godot/imported/8_Ligado_.png-2beef0c4f495ebcb5b083733cf6b1cc4.ctex"]
 
 [params]
 
-compress/mode=1
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""

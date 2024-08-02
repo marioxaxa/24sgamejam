@@ -1,11 +1,10 @@
-[gd_resource type="Theme" load_steps=11 format=3 uid="uid://byds11vsd6ber"]
+[gd_resource type="Theme" load_steps=10 format=3 uid="uid://byds11vsd6ber"]
 
 [ext_resource type="StyleBox" uid="uid://b6h4sqok6xlxy" path="res://themes/pixelart/button_normal_style.tres" id="1_o2icn"]
 [ext_resource type="FontFile" uid="uid://07yvi11ui7vg" path="res://fonts/Peaberry/PeaberryMono.ttf" id="1_qo4up"]
 [ext_resource type="Texture2D" uid="uid://c8yfrjpm5qqjt" path="res://sprites/ui/ui-tileset.png" id="2_adtur"]
 [ext_resource type="StyleBox" uid="uid://dj0ib6qvmygdj" path="res://themes/pixelart/button_pressed_style.tres" id="2_igfm3"]
 [ext_resource type="StyleBox" uid="uid://cg0tootlnej3o" path="res://themes/pixelart/slider_grabber_area_texture.tres" id="4_liesh"]
-[ext_resource type="Texture2D" uid="uid://c0coqpvq7hu6j" path="res://sprites/ui/ui-grabber.png" id="4_pfl2f"]
 [ext_resource type="StyleBox" path="res://themes/pixelart/slider_area_texture.tres" id="5_fa0x8"]
 [ext_resource type="Texture2D" uid="uid://vcoxg8ao2cpn" path="res://sprites/ui/ui-grabber-disabled.png" id="5_i611v"]
 
@@ -34,9 +33,9 @@ Button/styles/hover = ExtResource("1_o2icn")
 Button/styles/normal = ExtResource("1_o2icn")
 Button/styles/pressed = ExtResource("2_igfm3")
 HScrollBar/styles/scroll = ExtResource("5_fa0x8")
-HSlider/icons/grabber = ExtResource("4_pfl2f")
+HSlider/icons/grabber = null
 HSlider/icons/grabber_disabled = ExtResource("5_i611v")
-HSlider/icons/grabber_highlight = ExtResource("4_pfl2f")
+HSlider/icons/grabber_highlight = null
 HSlider/styles/grabber_area = ExtResource("4_liesh")
 HSlider/styles/grabber_area_highlight = ExtResource("4_liesh")
 HSlider/styles/slider = ExtResource("5_fa0x8")
@@ -46,9 +45,9 @@ Panel/styles/panel = SubResource("StyleBoxTexture_rbmb2")
 ProgressBar/styles/background = ExtResource("5_fa0x8")
 ProgressBar/styles/fill = ExtResource("4_liesh")
 VScrollBar/styles/scroll = ExtResource("5_fa0x8")
-VSlider/icons/grabber = ExtResource("4_pfl2f")
+VSlider/icons/grabber = null
 VSlider/icons/grabber_disabled = ExtResource("5_i611v")
-VSlider/icons/grabber_highlight = ExtResource("4_pfl2f")
+VSlider/icons/grabber_highlight = null
 VSlider/styles/grabber_area = ExtResource("4_liesh")
 VSlider/styles/grabber_area_highlight = ExtResource("4_liesh")
 VSlider/styles/slider = ExtResource("5_fa0x8")
