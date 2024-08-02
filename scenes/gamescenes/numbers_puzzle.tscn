@@ -1,0 +1,311 @@
+[gd_scene load_steps=37 format=3 uid="uid://drom1blae38mg"]
+
+[ext_resource type="FontFile" uid="uid://07yvi11ui7vg" path="res://fonts/Peaberry/PeaberryMono.ttf" id="1_amn5f"]
+[ext_resource type="StyleBox" uid="uid://b6h4sqok6xlxy" path="res://themes/pixelart/button_normal_style.tres" id="2_rxg8e"]
+[ext_resource type="StyleBox" uid="uid://dj0ib6qvmygdj" path="res://themes/pixelart/button_pressed_style.tres" id="3_te34h"]
+[ext_resource type="Texture2D" uid="uid://c8yfrjpm5qqjt" path="res://sprites/ui/ui-tileset.png" id="4_hf6jd"]
+[ext_resource type="Texture2D" uid="uid://cq601ln4uwyx0" path="res://sprites/elevator/blurElevator.png" id="5_0qibj"]
+[ext_resource type="Theme" uid="uid://byds11vsd6ber" path="res://themes/pixelart/pixelart.tres" id="6_a2ym7"]
+[ext_resource type="Script" path="res://scripts/ui/viewport_container.gd" id="7_gcl4m"]
+[ext_resource type="Script" path="res://scripts/elevator/numbers_menu.gd" id="8_4qugu"]
+[ext_resource type="Texture2D" uid="uid://dgegjxjeys5gt" path="res://sprites/ui/ui-grabber.png" id="11_qyqer"]
+[ext_resource type="Texture2D" uid="uid://djgp0svguk22x" path="res://sprites/elevator/Números elevador/Números Desligados/1_Desligado.png" id="12_oor6x"]
+[ext_resource type="Texture2D" uid="uid://c7w2nddk6duud" path="res://sprites/elevator/Números elevador/Números Desligados/2_Desligado.png" id="13_s1dqr"]
+[ext_resource type="Texture2D" uid="uid://dcr6dc5qy0i3m" path="res://sprites/elevator/Números elevador/Números Desligados/3_Desligado.png" id="14_tfcfd"]
+[ext_resource type="Texture2D" uid="uid://cwkm2g4g251yl" path="res://sprites/elevator/Números elevador/Números Desligados/4_Desligado.png" id="15_k8doh"]
+[ext_resource type="Texture2D" uid="uid://bdcf2lerakifv" path="res://sprites/elevator/Números elevador/Números Desligados/5_Desligado_.png" id="16_0kehw"]
+[ext_resource type="Texture2D" uid="uid://bh0xsx6ldr434" path="res://sprites/elevator/Números elevador/Números Desligados/6 Desligado.png" id="17_f5kw1"]
+[ext_resource type="Texture2D" uid="uid://bx5dxd82hjro2" path="res://sprites/elevator/Números elevador/Números Desligados/7_Desligado_.png" id="18_57ltp"]
+[ext_resource type="Texture2D" uid="uid://7vk1h6wahryy" path="res://sprites/elevator/Números elevador/Números Desligados/8_Desligado.png" id="19_f5340"]
+[ext_resource type="Texture2D" uid="uid://dlhrumys7w5hn" path="res://sprites/elevator/Números elevador/Números Desligados/9_Desligado.png" id="20_fabhk"]
+[ext_resource type="Texture2D" uid="uid://dynfyp806po3w" path="res://sprites/elevator/Números elevador/Números Desligados/10_Desligado_.png" id="21_idmlr"]
+[ext_resource type="Texture2D" uid="uid://dyc7431er1w8i" path="res://sprites/elevator/Números elevador/Números Desligados/11_Desligado.png" id="22_uinih"]
+[ext_resource type="Texture2D" uid="uid://b32hmw850cria" path="res://sprites/elevator/Números elevador/Números Desligados/12_Desligado.png" id="23_o6jg5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ve7hb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n3wa8"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rbmb2"]
+texture = ExtResource("4_hf6jd")
+texture_margin_left = 7.0
+texture_margin_top = 7.0
+texture_margin_right = 7.0
+texture_margin_bottom = 7.16192
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+region_rect = Rect2(0, 0, 48, 48)
+
+[sub_resource type="Theme" id="Theme_un6xn"]
+default_font = ExtResource("1_amn5f")
+Button/constants/h_separation = 0
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 30
+Button/fonts/font = ExtResource("1_amn5f")
+Button/styles/disabled = null
+Button/styles/focus = SubResource("StyleBoxEmpty_ve7hb")
+Button/styles/hover = ExtResource("2_rxg8e")
+Button/styles/normal = ExtResource("2_rxg8e")
+Button/styles/pressed = ExtResource("3_te34h")
+Label/colors/font_color = Color(0.317647, 0.321569, 0.384314, 1)
+Label/constants/line_spacing = 3
+Label/constants/outline_size = 0
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/constants/shadow_outline_size = 1
+Label/font_sizes/font_size = 16
+Label/fonts/font = ExtResource("1_amn5f")
+Label/styles/normal = SubResource("StyleBoxEmpty_n3wa8")
+Panel/styles/panel = SubResource("StyleBoxTexture_rbmb2")
+
+[sub_resource type="LabelSettings" id="LabelSettings_um4y5"]
+
+[sub_resource type="Animation" id="Animation_ro8gj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Main Menu:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_u1ere"]
+resource_name = "main_menu"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Main Menu:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ns3jf"]
+resource_name = "settings_menu"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Main Menu:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1152, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xq8ga"]
+_data = {
+"RESET": SubResource("Animation_ro8gj"),
+"main_menu": SubResource("Animation_u1ere"),
+"settings_menu": SubResource("Animation_ns3jf")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_h0fc5"]
+animation = &"main_menu"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_cmvsc"]
+animation = &"settings_menu"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ckc0g"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_huiay"]
+xfade_time = 1.0
+advance_mode = 2
+advance_expression = "self.current_menu == Menu.SETTINGS_MENU"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_b8jnv"]
+xfade_time = 1.0
+advance_mode = 2
+advance_expression = "current_menu == Menu.MAIN_MENU"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_6w8s2"]
+states/End/position = Vector2(925, 167)
+states/Start/position = Vector2(225, 179)
+states/main_menu/node = SubResource("AnimationNodeAnimation_h0fc5")
+states/main_menu/position = Vector2(431, 179)
+states/settings_menu/node = SubResource("AnimationNodeAnimation_cmvsc")
+states/settings_menu/position = Vector2(685, 179)
+transitions = ["Start", "main_menu", SubResource("AnimationNodeStateMachineTransition_ckc0g"), "main_menu", "settings_menu", SubResource("AnimationNodeStateMachineTransition_huiay"), "settings_menu", "main_menu", SubResource("AnimationNodeStateMachineTransition_b8jnv")]
+graph_offset = Vector2(-12, 98)
+
+[node name="menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_un6xn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("5_0qibj")
+offset = Vector2(270, 405)
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("6_a2ym7")
+
+[node name="Main Menu" type="AspectRatioContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1082.0
+offset_bottom = 1615.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("7_gcl4m")
+
+[node name="Menu Control" type="Control" parent="Main Menu"]
+layout_mode = 2
+script = ExtResource("8_4qugu")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Main Menu"]
+self_modulate = Color(0.319452, 0.255138, 0.0673297, 1)
+texture_filter = 1
+position = Vector2(469, 732)
+scale = Vector2(8, 8)
+texture = ExtResource("11_qyqer")
+
+[node name="Label_2" type="Label" parent="Main Menu/Sprite2D6"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -12.75
+offset_top = -19.5
+offset_right = -2.75
+offset_bottom = 3.5
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_um4y5")
+metadata/_edit_use_anchors_ = true
+
+[node name="MarginContainer2" type="MarginContainer" parent="Main Menu"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main Menu/MarginContainer2"]
+layout_mode = 2
+
+[node name="Control" type="GridContainer" parent="Main Menu/MarginContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+columns = 2
+
+[node name="TextureRect" type="TextureRect" parent="Main Menu/MarginContainer2/Control"]
+layout_mode = 2
+texture = ExtResource("12_oor6x")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="TextureRect2" type="TextureRect" parent="Main Menu/MarginContainer2/Control"]
+layout_mode = 2
+texture = ExtResource("13_s1dqr")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="TextureRect3" type="TextureRect" parent="Main Menu/MarginContainer2/Control"]
+layout_mode = 2
+texture = ExtResource("14_tfcfd")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="TextureRect4" type="TextureRect" parent="Main Menu/MarginContainer2/Control"]
+layout_mode = 2
+texture = ExtResource("15_k8doh")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="TextureRect5" type="TextureRect" parent="Main Menu/MarginContainer2/Control"]
+layout_mode = 2
+texture = ExtResource("16_0kehw")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="TextureRect6" type="TextureRect" parent="Main Menu/MarginContainer2/Control"]
+layout_mode = 2
+texture = ExtResource("17_f5kw1")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="TextureRect7" type="TextureRect" parent="Main Menu/MarginContainer2/Control"]
+layout_mode = 2
+texture = ExtResource("18_57ltp")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="TextureRect8" type="TextureRect" parent="Main Menu/MarginContainer2/Control"]
+layout_mode = 2
+texture = ExtResource("19_f5340")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="TextureRect9" type="TextureRect" parent="Main Menu/MarginContainer2/Control"]
+layout_mode = 2
+texture = ExtResource("20_fabhk")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="TextureRect10" type="TextureRect" parent="Main Menu/MarginContainer2/Control"]
+layout_mode = 2
+texture = ExtResource("21_idmlr")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="TextureRect11" type="TextureRect" parent="Main Menu/MarginContainer2/Control"]
+layout_mode = 2
+texture = ExtResource("22_uinih")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="TextureRect12" type="TextureRect" parent="Main Menu/MarginContainer2/Control"]
+layout_mode = 2
+texture = ExtResource("23_o6jg5")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="red_button2" type="Button" parent="Main Menu/MarginContainer2/Control"]
+layout_mode = 2
+text = "Voltar"
+
+[node name="red_button3" type="Button" parent="Main Menu/MarginContainer2/Control"]
+layout_mode = 2
+text = "Voltar"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_xq8ga")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_6w8s2")
+advance_expression_base_node = NodePath("../Main Menu/Menu Control")
+anim_player = NodePath("../AnimationPlayer")
+
+[connection signal="pressed" from="Main Menu/MarginContainer2/Control/red_button2" to="Main Menu/Menu Control" method="_on_red_button_2_pressed"]
+[connection signal="pressed" from="Main Menu/MarginContainer2/Control/red_button3" to="Main Menu/Menu Control" method="_on_red_button_2_pressed"]

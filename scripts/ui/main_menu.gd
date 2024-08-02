@@ -15,11 +15,13 @@ func _enter_tree():
 	start_button.pressed.connect(_on_start_button_pressed)
 	settings_button.pressed.connect(_on_settings_pressed)
 	exit_button.pressed.connect(_on_exit_pressed)
+	pass
 	
 func _exit_tree():
 	start_button.pressed.disconnect(_on_start_button_pressed)
 	settings_button.pressed.disconnect(_on_settings_pressed)
 	exit_button.pressed.disconnect(_on_exit_pressed)
+
 
 func _on_start_button_pressed():
 	SceneTransitionManager.change_scene_with_transition(

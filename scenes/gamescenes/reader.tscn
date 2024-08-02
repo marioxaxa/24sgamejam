@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://b0xviopy5haws"]
+
+[ext_resource type="Script" path="res://scripts/elevator/control_reader.gd" id="1_l6wyl"]
+[ext_resource type="PackedScene" path="res://scenes/scene_transitions/fade_transition.tscn" id="2_ftdrg"]
+[ext_resource type="Texture2D" uid="uid://cq601ln4uwyx0" path="res://sprites/elevator/blurElevator.png" id="3_m8365"]
+[ext_resource type="Theme" uid="uid://byds11vsd6ber" path="res://themes/pixelart/pixelart.tres" id="4_tf6kq"]
+
+[node name="Elevator" type="Node2D"]
+script = ExtResource("1_l6wyl")
+transition_path = ExtResource("2_ftdrg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(270, 405)
+texture = ExtResource("3_m8365")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 132.0
+offset_top = 710.0
+offset_right = 423.0
+offset_bottom = 775.0
+theme = ExtResource("4_tf6kq")
+text = "Chutar o codigo"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

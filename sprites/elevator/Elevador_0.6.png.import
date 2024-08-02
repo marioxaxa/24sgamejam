@@ -2,26 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dgegjxjeys5gt"
-path="res://.godot/imported/ui-grabber.png-dd90f760ed7ccdf47428527b31e5c0e4.ctex"
+uid="uid://c8nc0jp0hiy0m"
+path="res://.godot/imported/Elevador_0.6.png-14674d6a6e707a6e47953c033e5d6e1e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/ui/ui-grabber.png"
-dest_files=["res://.godot/imported/ui-grabber.png-dd90f760ed7ccdf47428527b31e5c0e4.ctex"]
+source_file="res://sprites/elevator/Elevador_0.6.png"
+dest_files=["res://.godot/imported/Elevador_0.6.png-14674d6a6e707a6e47953c033e5d6e1e.ctex"]
 
 [params]
 
-compress/mode=1
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
